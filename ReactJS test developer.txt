@@ -1,0 +1,157 @@
+ Тестовое задание 
+Необходимо реализовать веб-приложение для хранения информации о фильмах. Вместе с реализацией требуется предоставить документ объясняющий архитектуру приложения и содержащий инструкцию по запуску приложения.
+
+Информация о фильме:
+1. Уникальный идентификатор
+2. Название фильма
+3. Год выпуска
+4. Формат (VHS, DVD, Blu-Ray)
+5. Список актеров (“Имя и фамилия актера”)
+
+Функции, которые должна поддерживать система:
+1. Добавить фильм
+2. Удалить фильм
+3. Показать информацию о фильме
+4. Показать список фильмов отсортированных по названию в алфавитном порядке	
+5. Найти фильм по названию.
+6. Найти фильм по имени актера.
+7. Импорт фильмов с текстового файла (пример файла прилагается “sample_movies.txt”). Файл должен загружаться через веб-интерфейс.
+
+В первую очередь, важно чтобы была реализована вся функциональность с точки зрения пользователя. 
+
+Задание необходимо реализовать, как одностраничное приложение и REST API к нему.
+Одностраничное приложение необходимо написать используя ReactJS. Сервер, который будет предоставлять REST API, должен быть написан на nodejs, данные должны сохранятся между перезапусками сервера, для хранения данных можно использовать любой механизм, это может быть MongoDB, MySQL или просто файлы. При желании можно использовать ES6, Webpack, Flux/Redux, это даже будет плюсом.
+
+К приложению желательно написать автоматизированные функциональные тесты, рекомендуется использовать mocha, chai (и дополнительные фреймворки по необходимости). Тесты должны запускаться командой “npm test”
+
+Если Вы претендуете на позицию React Native разработчика, то вместо одностраничного приложения на ReactJs, можете реализовать мобильное приложение под Android на React Native. Это не обязательное требование, но это будет плюсом. 
+
+Если Вы претендуете на позицию NodeJS разработчика, то вместо одностраничного приложения на ReactJs, можете реализовать консольный (CLI) клиент  на NodeJS, который общается с сервером через REST API. Это на выбор, либо ReactJS SPA, либо CLI клиент. 
+
+sample_movies.txt
+
+Title: Blazing Saddles
+Release Year: 1974
+Format: VHS
+Stars: Mel Brooks, Clevon Little, Harvey Korman, Gene Wilder, Slim Pickens, Madeline Kahn
+
+Title: Casablanca
+Release Year: 1942
+Format: DVD
+Stars: Humphrey Bogart, Ingrid Bergman, Claude Rains, Peter Lorre
+
+Title: Charade
+Release Year: 1953
+Format: DVD
+Stars: Audrey Hepburn, Cary Grant, Walter Matthau, James Coburn, George Kennedy
+
+Title: Cool Hand Luke
+Release Year: 1967
+Format: VHS
+Stars: Paul Newman, George Kennedy, Strother Martin
+
+Title: Butch Cassidy and the Sundance Kid
+Release Year: 1969
+Format: VHS
+Stars: Paul Newman, Robert Redford, Katherine Ross
+
+Title: The Sting
+Release Year: 1973
+Format: DVD
+Stars: Robert Redford, Paul Newman, Robert Shaw, Charles Durning
+
+Title: The Muppet Movie
+Release Year: 1979
+Format: DVD
+Stars: Jim Henson, Frank Oz, Dave Geolz, Mel Brooks, James Coburn, Charles Durning, Austin Pendleton
+
+Title: Get Shorty 
+Release Year: 1995
+Format: DVD
+Stars: John Travolta, Danny DeVito, Renne Russo, Gene Hackman, Dennis Farina
+
+Title: My Cousin Vinny
+Release Year: 1992
+Format: DVD
+Stars: Joe Pesci, Marrisa Tomei, Fred Gwynne, Austin Pendleton, Lane Smith, Ralph Macchio
+
+Title: Gladiator
+Release Year: 2000
+Format: Blu-Ray
+Stars: Russell Crowe, Joaquin Phoenix, Connie Nielson
+
+Title: Star Wars
+Release Year: 1977
+Format: Blu-Ray
+Stars: Harrison Ford, Mark Hamill, Carrie Fisher, Alec Guinness, James Earl Jones
+
+Title: Raiders of the Lost Ark
+Release Year: 1981
+Format: DVD
+Stars: Harrison Ford, Karen Allen
+
+Title: Serenity
+Release Year: 2005
+Format: Blu-Ray
+Stars: Nathan Fillion, Alan Tudyk, Adam Baldwin, Ron Glass, Jewel Staite, Gina Torres, Morena Baccarin, Sean Maher, Summer Glau, Chiwetel Ejiofor
+
+Title: Hooisers
+Release Year: 1986
+Format: VHS
+Stars: Gene Hackman, Barbara Hershey, Dennis Hopper
+
+Title: WarGames
+Release Year: 1983
+Format: VHS
+Stars: Matthew Broderick, Ally Sheedy, Dabney Coleman, John Wood, Barry Corbin
+
+Title: Spaceballs
+Release Year: 1987
+Format: DVD
+Stars: Bill Pullman, John Candy, Mel Brooks, Rick Moranis, Daphne Zuniga, Joan Rivers
+
+Title: Young Frankenstein
+Release Year: 1974
+Format: VHS
+Stars: Gene Wilder, Kenneth Mars, Terri Garr, Gene Hackman, Peter Boyle
+
+Title: Real Genius
+Release Year: 1985
+Format: VHS
+Stars: Val Kilmer, Gabe Jarret, Michelle Meyrink, William Atherton
+
+Title: Top Gun
+Release Year: 1986
+Format: DVD
+Stars: Tom Cruise, Kelly McGillis, Val Kilmer, Anthony Edwards, Tom Skerritt
+
+Title: MASH
+Release Year: 1970 
+Format: DVD
+Stars: Donald Sutherland, Elliot Gould, Tom Skerritt, Sally Kellerman, Robert Duvall
+
+Title: The Russians Are Coming, The Russians Are Coming
+Release Year: 1966
+Format: VHS
+Stars: Carl Reiner, Eva Marie Saint, Alan Arkin, Brian Keith
+
+Title: Jaws
+Release Year: 1975 
+Format: DVD
+Stars: Roy Scheider, Robert Shaw, Richard Dreyfuss, Lorraine Gary 
+
+Title: 2001: A Space Odyssey
+Release Year: 1968
+Format: DVD
+Stars: Keir Dullea, Gary Lockwood, William Sylvester, Douglas Rain
+
+Title: Harvey
+Release Year: 1950 
+Format: DVD
+Stars: James Stewart, Josephine Hull, Peggy Dow, Charles Drake
+
+Title: Knocked Up
+Release Year: 2007
+Format: Blu-Ray
+Stars: Seth Rogen, Katherine Heigl, Paul Rudd, Leslie Mann
+
